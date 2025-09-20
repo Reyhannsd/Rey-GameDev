@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reyhan | Game Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="grid-pattern"></div>
+    <div class="particles" id="particles-js"></div>
+    
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <i class="fas fa-gamepad logo-icon"></i>
+                    Rey<span>sya</span>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#certificates">Certificates</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Crafting Immersive <span>Game Experiences</span></h1>
+                <p class="fade-in delay-1">I am Reyhan Syawal Dwi Putra, I am a game programmer or can be called a game developer and currently I am strengthening my competence in the gaming field.</p>
+                <div class="fade-in delay-2">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+            <img src="https://cdn.pixabay.com/photo/2022/04/06/19/14/game-development-7116321_1280.png" alt="Game Development" class="hero-image fade-in delay-3">
+        </div>
+    </section>
+    
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Game Developer & Interactive Experience Designer</h3>
+                    <p>In game development, I've worked on a variety of projects, from mobile games to AAA titles. My passion lies in creating immersive worlds and engaging gameplay mechanics that captivate players.</p>
+                    <p>I specialize in gameplay programming, shader development, and performance optimization. My goal is to push the boundaries of what's possible in interactive entertainment while maintaining polished, player-first experiences.</p>
+                    
+                    <div class="skills">
+                        <span class="skill">Unity</span>
+                        <span class="skill">Unreal Engine</span>
+                        <span class="skill">C#</span>
+                        <span class="skill">C++</span>
+                        <span class="skill">HLSL/GLSL</span>
+                        <span class="skill">Game Design</span>
+                        <span class="skill">VR/AR</span>
+                        <span class="skill">Procedural Generation</span>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <div class="editor-dots">
+                                <div class="dot red"></div>
+                                <div class="dot yellow"></div>
+                                <div class="dot green"></div>
+                            </div>
+                            <div class="editor-title">game_controller.cs</div>
+                        </div>
+                        <div class="editor-content">
+                            <div><span class="line-number">1</span><span class="code-keyword">using</span> UnityEngine;</div>
+                            <div><span class="line-number">2</span><span class="code-keyword">using</span> System.Collections;</div>
+                            <div><span class="line-number">3</span></div>
+                            <div><span class="line-number">4</span><span class="code-keyword">public class</span> <span class="code-function">PlayerController</span> : MonoBehaviour {</div>
+                            <div><span class="line-number">5</span>    <span class="code-keyword">public</span> <span class="code-keyword">float</span> moveSpeed = <span class="code-number">5f</span>;</div>
+                            <div><span class="line-number">6</span>    <span class="code-keyword">private</span> Rigidbody rb;</div>
+                            <div><span class="line-number">7</span></div>
+                            <div><span class="line-number">8</span>    <span class="code-keyword">void</span> <span class="code-function">Start</span>() {</div>
+                            <div><span class="line-number">9</span>        rb = GetComponent&lt;Rigidbody&gt;();</div>
+                            <div><span class="line-number">10</span>    }</div>
+                            <div><span class="line-number">11</span></div>
+                            <div><span class="line-number">12</span>    <span class="code-keyword">void</span> <span class="code-function">Update</span>() {</div>
+                            <div><span class="line-number">13</span>        <span class="code-keyword">float</span> moveX = Input.GetAxis(<span class="code-string">"Horizontal"</span>);</div>
+                            <div><span class="line-number">14</span>        <span class="code-keyword">float</span> moveZ = Input.GetAxis(<span class="code-string">"Vertical"</span>);</div>
+                            <div><span class="line-number">15</span></div>
+                            <div><span class="line-number">16</span>        Vector3 movement = <span class="code-keyword">new</span> Vector3(moveX, <span class="code-number">0f</span>, moveZ);</div>
+                            <div><span class="line-number">17</span>        rb.velocity = movement * moveSpeed;</div>
+                            <div><span class="line-number">18</span>    }</div>
+                            <div><span class="line-number">19</span>}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            
+            <div class="projects-grid">
+                <!-- Project cards will be loaded dynamically by JavaScript -->
+            </div>
+            
+            <div class="project-modal" id="projectModal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-body">
+                        <img id="modalImage" src="" alt="Project Image">
+                        <div class="modal-info">
+                            <h3 id="modalTitle"></h3>
+                            <p id="modalDescription"></p>
+                            <div class="project-tags" id="modalTags"></div>
+                            <div class="project-links" id="modalLinks"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="certificates">
+        <div class="container">
+            <h2 class="section-title">My Certificates</h2>
+            
+            <div class="certificates-grid">
+                <!-- Certificates will be loaded dynamically by JavaScript -->
+            </div>
+            
+            <div class="certificate-modal" id="certificateModal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-body">
+                        <img id="certificateImage" src="" alt="Certificate">
+                        <div class="modal-info">
+                            <h3 id="certificateTitle"></h3>
+                            <p id="certificateIssuer"></p>
+                            <p id="certificateDate"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:alex@ryderdev.com">syawalreyhan40@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <a href="tel:+1234567890">+62 812 2834 0584</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Cisarua , Bogor, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3>Availability</h3>
+                        <p>I'm currently available for freelance work and full-time positions. If you have a project that needs creative game development solutions, feel free to reach out!</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-itch-io"></i></a>
+            </div>
+            
+            <p class="footer-text"></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
